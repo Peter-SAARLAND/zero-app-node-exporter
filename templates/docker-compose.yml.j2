@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   node-exporter:
-    image: registry.gitlab.com/peter.saarland/zero/node-exporter
+    image: {{ docker_image }}
     environment:
       - NODE_ID={{ "{{.Node.ID}}" }}
     networks: 

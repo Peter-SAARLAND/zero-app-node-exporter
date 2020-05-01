@@ -1,2 +1,3 @@
 ---
-# defaults file for zero-app-loki
+# defaults file for zero-app-node-exporter
+docker_image: "registry.gitlab.com/peter.saarland/zero-app-node-exporter"

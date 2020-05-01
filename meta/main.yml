@@ -1,0 +1,16 @@
+galaxy_info:
+  author: Fabian Peter
+  description: Installs node-exporter on a Zero Cluster
+  company: Peter.SAARLAND
+  issue_tracker_url: https://gitlab.com/peter.saarland/zero-app-node-exprter/-/issues
+  license: MIT
+  min_ansible_version: 2.9
+  galaxy_tags: 
+    - devops
+    - infrastructure
+    - ansible
+    - prometheus
+    - grafana
+    - zero
+
+dependencies: []

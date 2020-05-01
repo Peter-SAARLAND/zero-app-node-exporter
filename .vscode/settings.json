@@ -1,4 +1,6 @@
 {
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.tabSize": 2,
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
@@ -16,5 +18,24 @@
       "editor.formatOnSave": true,
       "editor.formatOnPaste": false
   }
-
+  
+  "go.useLanguageServer": false
+  "terraform.indexing": {
+    "enabled": false,
+    "liveIndexing": false,
+    "delay": 500,
+    "exclude": [
+        ".terraform/**/*",
+        "**/.terraform/**/*"
+    ]
+  },
+  "terraform.languageServer": {
+    "enabled": false,
+    "args": []
+  },
+  "git.autofetch": true,
+  "window.zoomLevel": 0,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "go.formatTool": "goimports",
 }

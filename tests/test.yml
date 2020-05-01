@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - zero-app-loki
+    - zero-app-node-exporter

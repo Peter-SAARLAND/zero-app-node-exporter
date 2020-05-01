@@ -1,7 +1,6 @@
 include:
   - remote: 'https://gitlab.com/peter.saarland/scratch/-/raw/master/ci/templates/version.gitlab-ci.yml'
   - remote: 'https://gitlab.com/peter.saarland/scratch/-/raw/master/ci/templates/release.gitlab-ci.yml'
-  - remote: 'https://gitlab.com/peter.saarland/scratch/-/raw/master/ci/templates/build.gitlab-ci.yml'
 
 
 workflow:
@@ -40,19 +39,3 @@ variables:
 
 # include:
 #   - template: SAST.gitlab-ci.yml
-  
-release docker:
-  stage: release
-  image: docker:19.03.6
-  services:
-    - docker:19.03.6-dind
-  script:
-    - echo "$CI_JOB_TOKEN" | docker login $CI_REGISTRY --username=gitlab-ci-token --password-stdin
-    - docker pull $IMAGE_TAG || true
-    - docker tag $IMAGE_TAG $CI_REGISTRY_IMAGE:latest
-    - docker push $CI_REGISTRY_IMAGE:latest
-    - docker tag $IMAGE_TAG $CI_REGISTRY_IMAGE:v$(cat VERSION.txt)
-    - docker push $CI_REGISTRY_IMAGE:v$(cat VERSION.txt)
-  rules:
-    - if: '$CI_COMMIT_REF_NAME == "master"'
-      when: on_success

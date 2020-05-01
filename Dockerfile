@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #FROM prom/node-exporter:v0.16.0
 FROM prom/node-exporter:master
 
@@ -16,6 +15,3 @@ CMD [ "--path.sysfs=/host/sys", "--path.procfs=/host/proc", "--collector.textfil
 
 ARG BUILD_DATE
 LABEL org.label-schema.build-date=$BUILD_DATE
-=======
-FROM scratch
->>>>>>> 69d497d95da2a25d8cad7ce0fe396f7906a0c53e
